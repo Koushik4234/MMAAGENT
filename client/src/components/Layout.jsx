@@ -1,7 +1,7 @@
 import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext.jsx';
 import AmbientBackground from './AmbientBackground.jsx';
-import ThemeToggle from './ThemeToggle.jsx';
+
 
 export default function Layout() {
   const { isAuthed, logout } = useAuth();
@@ -24,7 +24,6 @@ export default function Layout() {
           </NavLink>
           <NavLink to="/dashboard">Dashboard</NavLink>
         </nav>
-        <ThemeToggle />
         {isAuthed && (
           <button
             className="btn btn-ghost"
